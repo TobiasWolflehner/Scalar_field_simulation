@@ -32,5 +32,6 @@ have to be modified so long as the code is working.
 
 The standard output of this simulation is a graph of the difference of the two 
 simulations in lightcone and normal coordinates. A heatmap or a graph as 2D
-slices is available and can the mode can be chosen with the Graph_as_Heatmap 
-parameter.
+slices is available and the mode can be chosen with the Graph_as_Heatmap 
+parameter set to 0 or 1. A graph of the scalar field in light-cone coordinates
+on its own can be obtained by setting the parameter PlotDifference to 0.
