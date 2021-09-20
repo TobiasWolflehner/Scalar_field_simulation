@@ -3,13 +3,16 @@ A simulation of interacting scalar fields in 1+1 dimensions implemented in pytho
 This simulation was coded for a bacchelor's thesis "Untersuchung des Einfluss des Koordinatensystems in einer numerischen Simulation reeller Skalarfelder in Lichtkegel- und Raum-Zeit Koordinaten", which was written in German.
 For accessibility the simulation was coded and annotated entirely in English.
 
-How to use (also found in the simulation code as is):
+How to use:
 
-There is no UI for this simulation. Parameters have are currently hard coded
-and included as global variables. How to set these parameters is explained below.
-Install the needed libraries such as numpy, matplotlib and also the modified scipy
-library from "https://github.com/TobiasWolflehner/scipy". If the official scipy
-library is used, slight deviations occur.
+There is no UI for this simulation. The .py file can be executed from a python 
+IDE such as spyder. Parameters have are currently hard coded and included as 
+global variables. How to set these parameters is explained below. Install the 
+needed libraries such as numpy, matplotlib and also the modified scipy library 
+from "https://github.com/TobiasWolflehner/scipy". If the official scipy library 
+is used, slight deviations occur.
+
+How to set parameters (also found in the simulation code as is):
 
 First the parameters of the simulation are chosen; two coordinatesystems are
 compared, lightcone coordinates and normal time-space Minkowski coordinates.
