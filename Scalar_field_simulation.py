@@ -224,7 +224,7 @@ def draw_differencemap_as2D_slices(scalar_field1, scalar_field2):
     plt.rc('ytick', labelsize=SMALL_SIZE)    # fontsize of the tick labels
     plt.rc('legend', fontsize=SMALL_SIZE)    # legend fontsize
     plt.rc('figure', titlesize=BIGGER_SIZE)  # fontsize of the figure title
-    Magnification=100
+    Magnification=100  # controls the magnification for first part of the plot
     plt.plot(x,Magnification*difference[x0_1,:], label=str(Magnification)+"x Δφ, $x^0$="+str(x0_1))
     plt.plot(x,difference[x0_2,:], label="$x^0$="+str(x0_2))
     plt.plot(x,difference[x0_3,:], label="$x^0$="+str(x0_3))
@@ -243,8 +243,14 @@ Scalar_field_Lightcone=resize_scalarfield(Scalar_field_Lightcone,Lenght_x0,Origi
 scalar_field3,scalar_field4=initialize_scalar_field_Normal_Coordinates(Lenght_x0,Lenght_x1,Broadening)
 Scalar_field_Normal=calculate_simulation_Normal_Coordinates(scalar_field3,scalar_field4,Lenght_x0,Lenght_x1,Interaction_constant)
 
-"Draw a difference-map as the subtraction of the two simulated fields"
+"Draw a difference-map as the subtraction of the two simulated fields or a single scalar field"
 if Graph_as_Heatmap == 1:
-    draw_differencemap_imshow(Scalar_field_Lightcone,Scalar_field_Normal)
+    if PlotDifference == 1:
+        draw_differencemap_imshow(Scalar_field_Lightcone,Scalar_field_Normal)
+    else:
+        draw_differencemap_imshow(Scalar_field_Lightcone,0)
 else:
-    draw_differencemap_as2D_slices(Scalar_field_Lightcone,Scalar_field_Normal)
+    if PlotDifference == 1:
+        draw_differencemap_as2D_slices(Scalar_field_Lightcone,Scalar_field_Normal)
+    else:
+        draw_differencemap_as2D_slices(Scalar_field_Lightcone,0)
