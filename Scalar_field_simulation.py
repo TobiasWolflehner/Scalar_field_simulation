@@ -11,14 +11,19 @@ import matplotlib.colors as mcolors
 from scipy.interpolate import interp1d
 from scipy.ndimage.interpolation import rotate
 
+# General Information:
 # This algorithm simulates scalar fields with a quadratic interaction term.
 # The theoretic basics can be found in the thesis "Untersuchung des Einfluss 
 # des Koordinatensystems in einer numerischen Simulation reeller Skalarfelder 
 # in Lichtkegel- und Raum-Zeit Koordinaten". The sources of this thesis can
 # also be referenced, since this publication is written in German.
 
+# How to use:
 # There is no UI for this simulation. Parameters have are currently hard coded
 # and included as global variables. How to set these parameters is explained below.
+# Install the needed libraries such as numpy, matplotlib and also the modified scipy
+# library from "https://github.com/TobiasWolflehner/scipy". If the official scipy
+# library is used, slight deviations occur.
 
 # First the parameters of the simulation are chosen; two coordinatesystems are
 # compared, lightcone coordinates and normal time-space Minkowski coordinates.
@@ -28,7 +33,8 @@ from scipy.ndimage.interpolation import rotate
 # simulation. x0, x1 refers to normal coordinates, while p and n refers to x+
 # and x- in lightcone coordinates.
 
-# For ease of use, modify only Lenght_x0, BroadeningQuotient as well as the
+# For ease of use, modify only Lenght_x0 (this needs to be uneven, this way the 
+# origin is always included in the lattice), BroadeningQuotient as well as the 
 # InteractionQuotient to desired values. If unclear, refer to the source thesis, 
 # the additional parameters serve to fine tune the algorithm, but do not usually 
 # have to be modified so long as the code is working.
