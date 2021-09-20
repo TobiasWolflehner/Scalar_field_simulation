@@ -4,6 +4,7 @@ This simulation was coded for a bacchelor's thesis "Untersuchung des Einfluss de
 For accessibility the simulation was coded and annotated entirely in English.
 
 How to use (also found in the simulation code as is):
+
 There is no UI for this simulation. Parameters have are currently hard coded
 and included as global variables. How to set these parameters is explained below.
 Install the needed libraries such as numpy, matplotlib and also the modified scipy
