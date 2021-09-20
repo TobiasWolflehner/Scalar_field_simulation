@@ -41,8 +41,9 @@ from scipy.ndimage.interpolation import rotate
 
 # The standard output of this simulation is a graph of the difference of the two 
 # simulations in lightcone and normal coordinates. A heatmap or a graph as 2D
-# slices is available and can the mode can be chosen with the Graph_as_Heatmap 
-# parameter.
+# slices is available and the mode can be chosen with the Graph_as_Heatmap 
+# parameter set to 0 or 1. A graph of the scalar field in light-cone coordinates
+# on its own can be obtained by setting the parameter PlotDifference to 0.
 
 "Size of array in normal (minkowski) coordinates in x0 and x1 direction"
 Lenght_x0=201
@@ -67,6 +68,7 @@ Interaction_constant=(100/(Lenght_x0-1))*(100/(Lenght_x0-1))*InteractionQuotient
 "Choose the method of graphing"
 Graph_as_Heatmap=1
 Graph_as_2D_slices=not(Graph_as_Heatmap)
+PlotDifference=1
 
 def initialize_scalar_field_LightCone(lenght_p,lenght_m,broadening):
     "Initializes the arrays for the simulation in lightcone coordinates"
