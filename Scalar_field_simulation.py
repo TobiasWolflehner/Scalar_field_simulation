@@ -13,7 +13,7 @@ from scipy.ndimage.interpolation import rotate
 
 # General Information:
 # This algorithm simulates scalar fields with a quadratic interaction term.
-# The theoretic basics can be found in the thesis "Untersuchung des Einfluss 
+# The theoretic basics can be found in the thesis "Untersuchung des Einflusses 
 # des Koordinatensystems in einer numerischen Simulation reeller Skalarfelder 
 # in Lichtkegel- und Raum-Zeit Koordinaten". The sources of this thesis can
 # also be referenced, since this publication is written in German.
